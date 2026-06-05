@@ -137,7 +137,7 @@ st.markdown("""
 </style>
 <div class="header">
     <h1>⚛️ REAKTOR PWR-UNIT-01 — MONITOR CZASU RZECZYWISTEGO</h1>
-    <p>Analiza danych w czasie rzeczywistym</p>
+    <p>Analiza danych w czasie rzeczywistym | Real-time Data Analysis</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -166,8 +166,8 @@ with st.sidebar:
     show_advanced = st.checkbox("Pokazuj widok zaawansowany", value=True)
     
     st.divider()
-#    st.subheader("📊 Informacje o systemie")
-#    st.text("• Język: Python\n• Framework: Streamlit\n• Wizualizacja: Plotly\n• API: Flask")
+    st.subheader("📊 Informacje o systemie")
+    st.text("• Język: Python\n• Framework: Streamlit\n• Wizualizacja: Plotly\n• API: Flask")
 
 # Pobierz najnowsze dane
 stats = fetch_latest_stats()

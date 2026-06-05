@@ -18,9 +18,8 @@ from pyspark.sql.types import (
 # ─────────────────────────────────────────────
 KAFKA_BROKER    = "broker:9092"
 KAFKA_TOPIC     = "nuclear-reactor-data"
-# Zmień te dwie linie na górze pliku
-FLASK_API_URL = "http://flask-app:5000/score" #cluade
-FLASK_HEALTH  = "http://flask-app:5000/health" #cluade
+FLASK_API_URL   = "http://localhost:5000/score"
+FLASK_HEALTH    = "http://localhost:5000/health"
 WATERMARK       = "5 seconds"
 WINDOW_DURATION = "30 seconds"
 
@@ -135,7 +134,6 @@ def main(mode: str):
     spark = (
         SparkSession.builder
         .appName("NuclearReactor-SparkConsumer")
-        .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.13:4.0.0") #claude
         .getOrCreate()
     )
     spark.sparkContext.setLogLevel("WARN")

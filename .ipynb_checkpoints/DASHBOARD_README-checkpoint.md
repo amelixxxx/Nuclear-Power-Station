@@ -288,6 +288,13 @@ dashboard.py
 - `spark_consumer.py` — Stream processing (Spark)
 - `Consumer.ipynb` — Notatnik konsumera Kafki
 
+## 📞 Wsparcie
+
+W razie problemów:
+1. Sprawdź logi w terminalach
+2. Upewnij się, że porty 5000 (API) i 8501 (Streamlit) są wolne
+3. Sprawdź połączenie z Kafką (`broker:9092`)
+
 ---
 
 **Wersja:** 1.0  
